@@ -1,0 +1,43 @@
+/* pages/canvasDemo/canvasDemo.wxss */
+.canvasBox{
+  /* height: 500rpx; */
+  width: 110rpx;
+  height: 110rpx;
+  position: relative;
+  /* background-color: #f5f5f5; */
+}
+.bigCircle{
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #ddd;
+}
+.littleCircle{
+  width: 85rpx;
+  height: 85rpx;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto auto;
+  background-color: #fff;
+}
+.canvas{
+  width: 110rpx;
+  height: 110rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  z-index: 99;
+}

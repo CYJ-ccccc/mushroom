@@ -1,0 +1,58 @@
+<!--pages/home/home.wxml-->
+<view class="home-wrap">
+	<!-- 输入框区域 -->
+	<view class="search-area">
+		<view class="search-icon">
+			<image src="../../assets/imagse/搜索icon@2x.png">
+			</image>
+		</view>
+		<view class="weui-cells weui-cells_after-title" class="input">
+			<view class="weui-cell weui-cell_input">
+				<input class="weui-input" maxlength="10" bindinput="bindKeyInput" placeholder="请输入课程的名称" />
+			</view>
+		</view>
+	</view>
+	<!-- 轮播图区域 -->
+	<view class="swiper">
+		<swiper indicator-dots="true" autoplay="true">
+			<block wx:for="{{imagesList}}" wx:key="*this">
+				<swiper-item class="swiper-item">
+					<image src="{{item.img_url}}">
+					</image>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- 推荐课程 -->
+	<view class="recom">
+		<view class="recom-title">
+			<text>推荐课程</text>
+			<image src="../../assets/imagse/arrow@2x.png"></image>
+		</view>
+		<view class="page-section-spacing">
+			<scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
+				<view wx:key="*this" wx:for="{{recomlist}}" class="scroll-view-item_H demo-text-1">
+					<image src="{{item.icon}}">
+					</image>
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+	<!-- 热门视频 -->
+	<view class="hot">
+		<view class="hot-title">
+			<text>热门视频</text>
+		</view>
+		<view class="hot-content">
+			<view class="hot-item" wx:for="{{hotVideolist}}" wx:key="index">
+				<navigator>
+					<image src="{{item.cover_photo_url}}"></image>
+				</navigator>
+				<text class="depict">{{item.name}}</text>
+				<text class="isRead">{{item.view_count}}人已观看</text>
+			</view>
+		</view>
+	</view>
+	<!-- 提示登录 -->
+	<login wx:if="{{!isLogin}}"></login>
+</view>

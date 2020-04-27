@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "login": "../../components/wx-login/wx-login",
+    "circle":"../../components/circle/circle"
+  }
+}

@@ -1,0 +1,9 @@
+<view class="course-wrap">
+	<view class="course-item" wx:for="{{courseList}}" wx:key="id">
+		<image class="course-item-img" src="{{item.icon}}"></image>
+		<text class="course-item-title">{{item.title}}</text>
+		<text class="course-item-function">{{item.subtitle}}</text>
+		<text class="course-item-level">{{level[item.level]}}</text>
+	</view>
+	<login wx:if="{{!isLogin}}"></login>
+</view>

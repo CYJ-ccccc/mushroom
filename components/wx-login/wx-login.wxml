@@ -1,0 +1,4 @@
+<!--pages/wx-login/wx-login.wxml-->
+<view class="wx-login">
+		<image src="../../assets/imagse/wx_login@2x.png" bindtap="tologin"></image>
+	</view>

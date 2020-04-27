@@ -1,0 +1,19 @@
+<!--pages/study/study.wxml-->
+<view class="study-container">
+	<view class="study-item" wx:for="{{count}}" wx:key="*this">
+		<image src="../../assets/imagse/course1.png" alt="" />
+		<view class="meta">
+			<text class="title">逻辑思维训练</text>
+			<text class="progress">已学习5课时/15课时</text>
+		</view>
+		<view class="circle">
+			<circle></circle>
+			<!-- <circle canvasId="{{item.sid}}" progress="80" width="{{55}}" height="{{55}}"></circle> -->
+		</view>
+	</view>
+	<view wx:if="{{!isEmpty}}">
+		<text class="no-study-tip">您还没有任何学习记录哦，赶快去学习吧~</text>
+	</view>
+</view>
+
+<login wx:if="{{!isLogin}}"></login>
